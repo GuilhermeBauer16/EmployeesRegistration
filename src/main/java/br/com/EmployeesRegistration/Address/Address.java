@@ -14,18 +14,17 @@ public class Address {
 
     private String street;
     private String neighborhood ;
-    private String zipCode;
+    private String zip_code;
     private String number;
-    private String federaLUnit;
+
     private String city;
     private String complement;
 
     public Address(AddressRegistrationData data){
         this.street = data.street();
         this.neighborhood = data.neighborhood();
-        this.zipCode = data.zipCode();
+        this.zip_code = data.zip_code();
         this.number = data.number();
-        this.federaLUnit = data.federaLUnit();
         this.city = data.city();
         this.complement = data.complement();
     }

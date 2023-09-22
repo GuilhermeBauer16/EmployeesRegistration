@@ -11,12 +11,11 @@ public record AddressRegistrationData(
         String neighborhood,
 
         @NotBlank
-        @Pattern(regexp = "\\d{9}")
-        String zipCode,
-        @NotBlank
-        String federaLUnit,
+        @Pattern(regexp = "\\d{8}")
+        String zip_code,
         @NotBlank
         String city,
         String number,
-        String complement) {
+        String complement
+) {
 }

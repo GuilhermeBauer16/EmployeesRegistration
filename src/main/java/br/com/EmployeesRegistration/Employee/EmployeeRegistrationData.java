@@ -1,10 +1,7 @@
 package br.com.EmployeesRegistration.Employee;
 
-import br.com.EmployeesRegistration.Address.Address;
+
 import br.com.EmployeesRegistration.Address.AddressRegistrationData;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

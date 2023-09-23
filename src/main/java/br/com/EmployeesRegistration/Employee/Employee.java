@@ -3,7 +3,6 @@ package br.com.EmployeesRegistration.Employee;
 
 import br.com.EmployeesRegistration.Address.Address;
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -46,6 +45,30 @@ public class Employee {
         this.identification = data.identification();
         this.post = data.post();
         this.address = new Address(data.address());
+    }
+
+    public void updateInformationEmployee(UpdateDataEmployee updateDataEmployee){
+
+        if (updateDataEmployee.name() != null){
+            this.name = updateDataEmployee.name();
+        }
+        if (updateDataEmployee.phone() != null){
+            this.phone = updateDataEmployee.phone();
+
+        }
+
+        if (updateDataEmployee.gender() != null){
+            this.gender = updateDataEmployee.gender();
+
+        }
+        if (updateDataEmployee.addressRegistrationData() != null){
+            address.updateInformationAddress(updateDataEmployee.addressRegistrationData());
+
+        }
+    }
+
+    public void delete() {
+        this.active = false;
     }
 }
 

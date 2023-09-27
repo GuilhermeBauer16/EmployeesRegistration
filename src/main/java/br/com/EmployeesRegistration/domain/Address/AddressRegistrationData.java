@@ -1,4 +1,4 @@
-package br.com.EmployeesRegistration.Address;
+package br.com.EmployeesRegistration.domain.Address;
 
 import jakarta.validation.constraints.NotBlank;
 

@@ -1,7 +1,6 @@
-package br.com.EmployeesRegistration.Employee;
+package br.com.EmployeesRegistration.domain.Employee;
 
-import br.com.EmployeesRegistration.Address.AddressRegistrationData;
-import jakarta.validation.constraints.NotBlank;
+import br.com.EmployeesRegistration.domain.Address.AddressRegistrationData;
 import jakarta.validation.constraints.NotNull;
 
 public record UpdateDataEmployee(

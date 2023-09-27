@@ -1,4 +1,4 @@
-package br.com.EmployeesRegistration.Employee;
+package br.com.EmployeesRegistration.domain.Employee;
 
 public enum Post {
 

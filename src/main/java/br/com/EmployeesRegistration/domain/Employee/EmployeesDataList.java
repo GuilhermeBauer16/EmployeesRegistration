@@ -1,4 +1,4 @@
-package br.com.EmployeesRegistration.Employee;
+package br.com.EmployeesRegistration.domain.Employee;
 
 public record EmployeesDataList(Long id ,String name, String gender, String phone, Post post) {
 

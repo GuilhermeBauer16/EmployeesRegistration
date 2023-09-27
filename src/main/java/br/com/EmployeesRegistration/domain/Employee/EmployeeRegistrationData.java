@@ -1,7 +1,7 @@
-package br.com.EmployeesRegistration.Employee;
+package br.com.EmployeesRegistration.domain.Employee;
 
 
-import br.com.EmployeesRegistration.Address.AddressRegistrationData;
+import br.com.EmployeesRegistration.domain.Address.AddressRegistrationData;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

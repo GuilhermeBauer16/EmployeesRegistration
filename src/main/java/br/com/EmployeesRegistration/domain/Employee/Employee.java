@@ -1,7 +1,7 @@
-package br.com.EmployeesRegistration.Employee;
+package br.com.EmployeesRegistration.domain.Employee;
 
 
-import br.com.EmployeesRegistration.Address.Address;
+import br.com.EmployeesRegistration.domain.Address.Address;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

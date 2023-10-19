@@ -1,10 +1,7 @@
 package br.com.EmployeesRegistration.domain.user;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,6 +12,7 @@ import java.util.List;
 @Table(name = "users")
 @Entity(name = "User")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -25,6 +23,20 @@ public class User implements UserDetails {
     private Long id;
     private String login;
     private String password;
+
+    private String telephone;
+
+    private  String name;
+
+    private String gender;
+
+    public User(UserRegistrationData userRegistrationData){
+        this.name = userRegistrationData.name();
+        this.login = userRegistrationData.login();
+        this.password = userRegistrationData.password();
+        this.telephone = userRegistrationData.telephone();
+        this.gender = userRegistrationData.gender();
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

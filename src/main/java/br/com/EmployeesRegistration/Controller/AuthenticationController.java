@@ -20,18 +20,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthenticationController {
 
     @Autowired
-    private AuthenticationManager manager ;
+    private AuthenticationManager manager;
 
     @Autowired
     private TokenService tokenService;
 
     @PostMapping
-    public ResponseEntity logIn(@RequestBody @Valid AuthenticationData authenticationData){
+    public ResponseEntity efetuarLogin(@RequestBody @Valid AuthenticationData authenticationData){
+
         var authenticationToken = new UsernamePasswordAuthenticationToken(authenticationData.login() , authenticationData.password());
         var authentication = manager.authenticate(authenticationToken);
         var tokenJWT = tokenService.generateToken((User) authentication.getPrincipal());
         return ResponseEntity.ok(new TokenJWTData(tokenJWT));
-
     }
 
     }

@@ -1,4 +1,4 @@
-package br.com.EmployeesRegistration.domain.user;
+package br.com.EmployeesRegistration.domain.model.user;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

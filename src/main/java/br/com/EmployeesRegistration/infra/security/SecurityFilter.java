@@ -1,6 +1,6 @@
 package br.com.EmployeesRegistration.infra.security;
 
-import br.com.EmployeesRegistration.domain.user.UserRepository;
+import br.com.EmployeesRegistration.domain.model.user.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,7 +31,7 @@ public class SecurityFilter extends OncePerRequestFilter {
             var user = userRepository.findByLogin(subject);
             var authentication = new UsernamePasswordAuthenticationToken(user , null , user.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
-            System.out.println("LOGADO NA REQUISICAO");
+
         }
 
         filterChain.doFilter(request, response);

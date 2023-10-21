@@ -1,5 +1,6 @@
-package br.com.EmployeesRegistration.domain.user;
+package br.com.EmployeesRegistration.domain.model.user;
 
+import br.com.EmployeesRegistration.domain.model.Employee.UpdateDataEmployee;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class User implements UserDetails {
+public class UserModel implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +31,7 @@ public class User implements UserDetails {
 
     private String gender;
 
-    public User(UserRegistrationData userRegistrationData){
+    public UserModel(UserRegistrationData userRegistrationData){
         this.name = userRegistrationData.name();
         this.login = userRegistrationData.login();
         this.password = userRegistrationData.password();
@@ -38,6 +39,21 @@ public class User implements UserDetails {
         this.gender = userRegistrationData.gender();
     }
 
+    public void updateInformationUser(UpdateUserData updateUserData) {
+
+        if (updateUserData.name() != null) {
+            this.name = updateUserData.name();
+        }
+        if (updateUserData.telephone() != null) {
+            this.telephone = updateUserData.telephone();
+
+        }
+
+        if (updateUserData.gender() != null) {
+            this.gender = updateUserData.gender();
+
+        }
+    }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));

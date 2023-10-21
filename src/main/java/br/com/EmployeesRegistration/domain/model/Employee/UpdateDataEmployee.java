@@ -1,4 +1,4 @@
-package br.com.EmployeesRegistration.domain.Employee;
+package br.com.EmployeesRegistration.domain.model.Employee;
 
 import br.com.EmployeesRegistration.domain.Address.AddressRegistrationData;
 import jakarta.validation.constraints.NotNull;

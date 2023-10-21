@@ -1,8 +1,8 @@
 package br.com.EmployeesRegistration.Controller;
 
 
-import br.com.EmployeesRegistration.domain.user.AuthenticationData;
-import br.com.EmployeesRegistration.domain.user.User;
+import br.com.EmployeesRegistration.domain.model.user.AuthenticationData;
+import br.com.EmployeesRegistration.domain.model.user.UserModel;
 import br.com.EmployeesRegistration.infra.security.TokenJWTData;
 import br.com.EmployeesRegistration.infra.security.TokenService;
 import jakarta.validation.Valid;
@@ -26,11 +26,11 @@ public class AuthenticationController {
     private TokenService tokenService;
 
     @PostMapping
-    public ResponseEntity efetuarLogin(@RequestBody @Valid AuthenticationData authenticationData){
+    public ResponseEntity logIn(@RequestBody @Valid AuthenticationData authenticationData){
 
         var authenticationToken = new UsernamePasswordAuthenticationToken(authenticationData.login() , authenticationData.password());
         var authentication = manager.authenticate(authenticationToken);
-        var tokenJWT = tokenService.generateToken((User) authentication.getPrincipal());
+        var tokenJWT = tokenService.generateToken((UserModel) authentication.getPrincipal());
         return ResponseEntity.ok(new TokenJWTData(tokenJWT));
     }
 

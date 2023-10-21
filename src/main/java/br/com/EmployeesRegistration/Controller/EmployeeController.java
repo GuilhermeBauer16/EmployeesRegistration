@@ -1,6 +1,6 @@
 package br.com.EmployeesRegistration.Controller;
 
-import br.com.EmployeesRegistration.domain.Employee.*;
+import br.com.EmployeesRegistration.domain.model.Employee.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("employee")
+@RequestMapping("employee-registration")
 public class EmployeeController {
 
     @Autowired
@@ -20,7 +20,7 @@ public class EmployeeController {
     @PostMapping
     @Transactional
     public ResponseEntity insert(@RequestBody @Valid EmployeeRegistrationData data , UriComponentsBuilder uriBuilder){
-        var employee = new Employee(data);
+        var employee = new EmployeeModel(data);
         repository.save(employee);
         var uri = uriBuilder.path("employee/{id}").buildAndExpand(employee.getId()).toUri();
         return ResponseEntity.created(uri).body(new EmployeeDetailData(employee));

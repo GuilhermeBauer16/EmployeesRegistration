@@ -1,4 +1,4 @@
-package br.com.EmployeesRegistration.domain.Employee;
+package br.com.EmployeesRegistration.domain.model.Employee;
 
 
 import br.com.EmployeesRegistration.domain.Address.Address;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Employee {
+public class EmployeeModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +36,7 @@ public class Employee {
     @Embedded
     private Address address;
 
-    public Employee(EmployeeRegistrationData data) {
+    public EmployeeModel(EmployeeRegistrationData data) {
         this.active = true;
         this.name = data.name();
         this.email = data.email();

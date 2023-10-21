@@ -1,6 +1,5 @@
-package br.com.EmployeesRegistration.domain.user;
+package br.com.EmployeesRegistration.domain.model.user;
 
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

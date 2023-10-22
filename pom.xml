@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com</groupId>
-	<artifactId>EmployeesRegistration</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>employees-registration</artifactId>
+	<version>1.0.0-employees-registration</version>
 	<name>EmployeesRegistration</name>
 	<description>A employee registration</description>
 	<properties>

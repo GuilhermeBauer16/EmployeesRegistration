@@ -1,5 +1,7 @@
 package br.com.EmployeesRegistration.Controller;
 
+import br.com.EmployeesRegistration.domain.model.Employee.EmployeeDetailData;
+import br.com.EmployeesRegistration.domain.model.Employee.UpdateDataEmployee;
 import br.com.EmployeesRegistration.domain.model.user.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +51,7 @@ public class UserController {
 
     @PutMapping
     @Transactional
-    public ResponseEntity update(@RequestBody UpdateUserData updateUserData) {
+    public ResponseEntity update(@RequestBody @Valid UpdateUserData updateUserData) {
         var user = userRepository.getReferenceById(updateUserData.id());
         user.updateInformationUser(updateUserData);
         return ResponseEntity.ok(new UserDetailData(user));

@@ -1,4 +1,4 @@
 # Employees Registration
 ## Objective
-A employee registration when the user, have the posibility to regist a user with the field: name, login, password, telephone, gender.
-After register, the user may have to do log in, for can register a employee.
+An employee registration where the user will register a user with the field: name, login, password, telephone, and gender.
+After registering, the user may have to log in, to can register an employee.

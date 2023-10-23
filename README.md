@@ -6,3 +6,7 @@ After registering, the user may have to log in, to can register an employee.
 ## Learnings
 In this project, I learned how to create projects using String boot in Java, using the spring initializer. I also learned how to create a CRUD(Create, Read, Update, Delete)
 using API rest with the methods PUT, POST, GET, DELETE, and how to create a login using the token JWT and how to cript the password of the user, using the Bycript. 
+
+## Funcionalities
+## Dependencies that I used in the Maven project
+![image](https://github.com/GuilhermeBauer16/EmployeesRegistration/assets/123701893/8981e813-0039-4cb9-94e9-7cdb9a4bb009)

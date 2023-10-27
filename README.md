@@ -13,7 +13,7 @@ using API rest with the methods PUT, POST, GET, DELETE, and how to create a logi
 ## Funcionalities
 * System to register and log in.
   
-* Addition of employee divided between:
+* Addition of employee divided between:    
   * name.
   * gender.
   * telephone.

@@ -21,7 +21,7 @@ using API rest with the methods PUT, POST, GET, DELETE, and how to create a logi
   * E-mail.
   * Address.
    
-* Registered employee edition.
+* Registered employee edition.     
   
 * Deletion of registrated employee.
   

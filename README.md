@@ -6,7 +6,7 @@ After registering, the user may have to log in, to can register an employee.
 ![image](https://github.com/GuilhermeBauer16/EmployeesRegistration/assets/123701893/15f6c24a-10dc-4d81-8bf1-cd0fff85d651)
 
 
-## Learnings
+## Learnings.    
 In this project, I learned how to create projects using String boot in Java, using the spring initializer. I also learned how to create a CRUD(Create, Read, Update, Delete)
 using API rest with the methods PUT, POST, GET, DELETE, and how to create a login using the token JWT and how to cript the password of the user, using the Bycript. 
 

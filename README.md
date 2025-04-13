@@ -2,7 +2,7 @@
 ## Objective.                                     
 An employee registration where the user will register a user with the field: name, login, password, telephone, and gender.   
 After registering, the user may have to log in, to can register an employee.           
-      
+            
 ![image](https://github.com/GuilhermeBauer16/EmployeesRegistration/assets/123701893/15f6c24a-10dc-4d81-8bf1-cd0fff85d651)
 
 
